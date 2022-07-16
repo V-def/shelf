@@ -10,3 +10,8 @@ def index():
 @app.route('/search/')
 def search():
     return render_template('search.html')
+
+# pwa
+@app.route('/sw.js', methods=['GET'])
+def sw():
+    return app.send_static_file('js/sw.js')

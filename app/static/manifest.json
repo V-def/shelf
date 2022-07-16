@@ -1,0 +1,21 @@
+{
+  "background_color": "#ffffff",
+  "description": "",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Shelf",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Shelf",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/static/assets/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": []
+}

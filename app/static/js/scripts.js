@@ -5,3 +5,14 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register("../sw.js", {scope: '/'})
+    .then(registration => {
+      console.log("ServiceWorker running");
+    })
+    .catch(err => {
+       console.log(err);
+    })
+}
