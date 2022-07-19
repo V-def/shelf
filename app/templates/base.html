@@ -18,55 +18,12 @@
     <body>
         <!-- Navigation-->
         <!-- Navigation top navbar-->
-        <nav class="navbar navbar-dark navbar-expand bg-dark flex-column flex-md-row bd-navbar">
-            <div class="container px-4 px-lg-5 col-auto">
-                <div class="input-group rounded">
-                <a class="navbar-brand" href="/">Shelf</a>
-                  <input type="search" class="form-control rounded" placeholder="Rechercher" aria-label="Search" aria-describedby="search-addon" />
-                  <span class="input-group-text border-0" id="search-addon">
-                    <i class="fa fa-search"></i>
-                  </span>
-                </div>
-            </div>
-        </nav>
+        {% include 'navbar_top.html' %}
         <!-- Navigation bottom-->
-        <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark" role="navigation">
-            <div class="container">
-                <ul class="navbar-nav nav-justified w-100 text-center">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link d-flex flex-column" data-toggle="collapse">
-                            <span class="fa fa-home fa-lg"></span>
-                            <span class="d-none d-sm-inline mt-1">Accueil</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/search" class="nav-link d-flex flex-column" data-toggle="collapse">
-                            <span class="fa fa-search fa-lg"></span>
-                            <span class="d-none d-sm-inline mt-1">Rechercher</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/u/{{ username }}/shelf" class="nav-link d-flex flex-column" data-toggle="collapse">
-                            <span class="fa fa-archive fa-lg"></span>
-                            <span class="d-none d-sm-inline mt-1">Mon étagère</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/u/{{ username }}" class="nav-link d-flex flex-column" data-toggle="collapse">
-                            <span class="fa fa-user fa-lg"></span>
-                            <span class="d-none d-sm-inline mt-1">Mon profil</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        {% include 'navbar_bottom.html' %}
         <!-- Page Content-->
         <main class="container-fluid">
-            <div class="px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    {% block content %}{% endblock %}
-                </div>
-            </div>
+            {% block content %}{% endblock %}
         </main>
         <br>
         <br>

@@ -1,0 +1,30 @@
+<nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark" role="navigation">
+    <div class="container">
+        <ul class="navbar-nav nav-justified w-100 text-center">
+            <li class="nav-item">
+                <a class="nav-link d-flex flex-column" data-toggle="collapse" href="{{ url_for('index') }}">
+                    <span class="fa fa-home fa-lg"></span>
+                    <span class="d-none d-sm-inline mt-1">Accueil</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex flex-column" data-toggle="collapse" href="{{ url_for('search') }}">
+                    <span class="fa fa-search fa-lg"></span>
+                    <span class="d-none d-sm-inline mt-1">Rechercher</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex flex-column" data-toggle="collapse" href="{{ url_for('error') }}">
+                    <span class="fa fa-archive fa-lg"></span>
+                    <span class="d-none d-sm-inline mt-1">Mon étagère</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link d-flex flex-column" data-toggle="collapse" href="{{ url_for('error') }}">
+                    <span class="fa fa-user fa-lg"></span>
+                    <span class="d-none d-sm-inline mt-1">Mon profil</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
