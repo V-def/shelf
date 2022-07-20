@@ -1,11 +1,11 @@
 <nav class="navbar navbar-dark navbar-expand bg-dark flex-column flex-md-row bd-navbar">
     <div class="container px-4 px-lg-5 col-auto">
         <a class="navbar-brand" href="{{ url_for('index') }}">Shelf</a>
-          <form class="input-group" method="POST" action="{{ url_for('search') }}">
+          <form class="input-group" method="POST" action="{{ url_for('search_terms') }}">
             <input class="form-control rounded" type="search" placeholder="Rechercher" aria-label="Search" aria-describedby="search-addon" name="searched/"></input>
-            <span class="input-group-text" id="search-addon">
+            <button class="btn btn-secondary" type="submit">
               <i class="fa fa-search"></i>
-            </span>
+            </button>
           </form>
     </div>
 </nav>
