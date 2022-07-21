@@ -1,30 +1,28 @@
-from flask import Flask, render_template, request, url_for, redirect
+from flask import Blueprint, render_template, request, url_for, redirect, flash
 
-app = Flask(__name__)
-app.config.from_object('config')
+main = Blueprint('main', __name__, static_folder='static')
 
-# Main pages
-
-@app.route('/')
+@main.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/search/')
-def search():
+@main.route('/search/')
+def search_page():
     return render_template('search.html')
 
 # Errors
 
-@app.errorhandler(404)
+@main.app_errorhandler(404)
 def page_not_found(e):
     return render_template('error.html', error_message="Mince ! La page que vous avez cherché n'existe pas...", error_log=e)
 
-@app.errorhandler(500)
+@main.app_errorhandler(500)
 def page_not_found(e):
     return render_template('error.html', error_message="Mince ! Il y a eu une erreur interne...", error_log=e)
 
 # PWA
 
-@app.route('/sw.js', methods=['GET'])
+@main.route('/sw.js', methods=['GET'])
 def sw():
-    return app.send_static_file('js/sw.js')
+    return main.send_static_file('js/sw.js')
+

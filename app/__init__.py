@@ -1,13 +1,16 @@
 import os
-
 from flask import Flask
 
-from .views import app
-from . import models
+from .views import main
+from .extensions import db
 
-models.db.init_app(app)
-
-@app.cli.command("init-db")
-def init_db():
-    models.init_db()
+def create_app(config_file='config'):
+    app = Flask(__name__)
+    app.config.from_object(config_file)
+    
+    db.init_app(app)
+    
+    app.register_blueprint(main)
+    
+    return app
 
