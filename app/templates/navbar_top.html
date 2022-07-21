@@ -1,8 +1,8 @@
 <nav class="navbar navbar-dark navbar-expand bg-dark flex-column flex-md-row bd-navbar">
     <div class="container px-4 px-lg-5 col-auto">
-        <a class="navbar-brand" href="{{ url_for('index') }}">Shelf</a>
-          <form class="input-group" method="POST" action="{{ url_for('search_terms') }}">
-            <input class="form-control rounded" type="search" placeholder="Rechercher" aria-label="Search" aria-describedby="search-addon" name="searched/"></input>
+        <a class="navbar-brand" href="{{ url_for('main.index') }}">Shelf</a>
+          <form class="input-group" method="POST" action="{{ url_for('main.index') }}">
+            <input class="form-control" type="search" placeholder="Rechercher" aria-label="Search" aria-describedby="search-addon" name="searched/"></input>
             <button class="btn btn-secondary" type="submit">
               <i class="fa fa-search"></i>
             </button>
